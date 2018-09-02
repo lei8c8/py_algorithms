@@ -13,4 +13,4 @@ class Solution:
             else:
                 i += 2
                 last_step = 2
-        return last_step == 2
+        return last_step == 1
