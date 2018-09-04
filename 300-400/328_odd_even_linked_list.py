@@ -16,11 +16,11 @@ class Solution:
             return head
         odd_current = head
         even_current = head.next
+        even_head = head.next
         while odd_current.next and even_current.next:
             odd_current.next = even_current.next
             even_current.next = odd_current.next.next
             odd_current = odd_current.next
             even_current = even_current.next
-        odd_current.next = head.next
+        odd_current.next = even_head
         return head
-
