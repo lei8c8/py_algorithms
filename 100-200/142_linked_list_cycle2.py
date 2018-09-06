@@ -16,6 +16,11 @@ class Solution(object):
             while slow is not fast:
                 slow = slow.next
                 fast = fast.next.next
+            fast = head
+            slow = slow.next
+            while fast is not slow:
+                slow = slow.next
+                fast = fast.next
             return slow
         except:
             return None
