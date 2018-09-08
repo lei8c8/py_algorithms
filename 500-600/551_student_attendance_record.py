@@ -4,8 +4,4 @@ class Solution:
         :type s: str
         :rtype: bool
         """
-        if 'LLL' in s:
-            return False
-        if s.count('A') > 1:
-            return False
-        return True
+        return False if 'LLL' in s or s.count('A') > 1 else True
