@@ -17,6 +17,7 @@ class Solution:
             else:
                 if count >= 3:
                     res.append([i - count, i - 1])
-                    count = 1
-                    pointer = S[i]
+                count = 1
+                pointer = S[i]
         return res
+
