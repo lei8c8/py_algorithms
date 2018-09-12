@@ -14,15 +14,12 @@ class Solution:
         :type n: int
         :rtype: ListNode
         """
-        if (head is None) or (head.next is None and n == 1):
+        if head is None:
             return None
         ahead = head
         behind = head
-        try:
-            for _ in range(n):
-                ahead = ahead.next
-        except:
-            return None
+        for _ in range(n):
+            ahead = ahead.next
         if ahead is None:
             head = head.next
             return head
