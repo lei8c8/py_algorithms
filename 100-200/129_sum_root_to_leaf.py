@@ -18,7 +18,7 @@ class Solution:
         lookup_parent = {root: None}
         traversal_queue = deque([root])
         leaves = []
-        target = []
+        paths = []
         total = 0
         while traversal_queue:
             node = traversal_queue.popleft()
@@ -35,8 +35,7 @@ class Solution:
             while lookup_parent[leaf] != None:
                 temp.append((lookup_parent[leaf]).val)
                 leaf = lookup_parent[leaf]
-            target.append(temp)
-        for arr in target:
-            arr = int(''.join([str(i) for i in arr])[::-1])
-            total += arr
+            paths.append(temp)
+        for arr in paths:
+            total += int(''.join([str(i) for i in arr])[::-1])
         return total
