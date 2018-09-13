@@ -14,7 +14,7 @@ class Solution:
         current = head
         res = 0
         while current:
-            if current.val in lookup and (current.next.val not in lookup or current.next is None):
+            if current.val in lookup and ( current.next is None or current.next.val not in lookup):
                 res += 1
             current = current.next
         return res
