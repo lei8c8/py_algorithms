@@ -11,7 +11,7 @@ class Solution:
         :type root: TreeNode
         :rtype: List[List[int]]
         """
-        if not root: return None
+        if not root: return []
         traversal_q, i, res = deque([root]), 1, []
         while traversal_q:
             level_len = len(traversal_q)
