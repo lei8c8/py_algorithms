@@ -17,4 +17,8 @@ class Solution:
                 return False
             last = name[i]
             p += 1
+        if p < len(typed):
+            for ele in typed[p:len(typed)]:
+                if ele != name[-1]:
+                    return False
         return True
